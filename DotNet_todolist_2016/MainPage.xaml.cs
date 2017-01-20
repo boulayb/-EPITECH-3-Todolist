@@ -26,5 +26,13 @@ namespace DotNet_todolist_2016
         {
             this.InitializeComponent();
         }
+
+        private void button_click(object sender, RoutedEventArgs e)
+        {
+            if (txtBox.Text != "")
+                txtBlock.Text = "Hello: " + txtBox.Text;
+            else
+                txtBlock.Text = "You have not write your name.";
+        }
     }
 }
