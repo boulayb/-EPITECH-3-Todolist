@@ -4,5 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DotNet_todolist_2016"
     RequestedTheme="Light">
+    <Application.Resources>
+        <x:String x:Key="ida:ClientId">0efe25d0-21db-4085-bb05-a8e61394e3a5</x:String>
+        <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+        <x:String x:Key="ida:Domain">epitechfr.onmicrosoft.com</x:String>
+    </Application.Resources>
 
 </Application>

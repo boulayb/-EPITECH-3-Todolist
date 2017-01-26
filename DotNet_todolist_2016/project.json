@@ -1,6 +1,13 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
+    "Microsoft.IdentityModel.Clients.ActiveDirectory": "2.14.201151115",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "Microsoft.Office365.Discovery": "1.0.22",
+    "Microsoft.Office365.OutlookServices": "1.0.41",
+    "Microsoft.Office365.SharePoint": "1.0.22",
+    "Microsoft.OneDriveSDK": "2.0.6",
+    "Microsoft.OneDriveSDK.Authentication": "1.0.8",
+    "SQLite.Net-PCL": "3.1.1"
   },
   "frameworks": {
     "uap10.0": {}

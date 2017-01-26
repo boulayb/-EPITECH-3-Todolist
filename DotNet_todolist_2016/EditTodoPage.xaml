@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="DotNet_todolist_2016.EditTodoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DotNet_todolist_2016"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <SplitView DisplayMode="CompactOverlay" CompactPaneLength="50">
+
+        <SplitView.Pane>
+            <StackPanel Background="Gray">
+                <Button x:Name="BackToMain" FontFamily="Segoe MDL2 Assets" Content="&#xE72B;"
+                        Width="50" Height="50"
+                        Background="Transparent" Click="BackToMain_OnClick">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Return to main page"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button x:Name="DeleteTodo" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;"
+                        Width="50" Height="50"
+                        Background="Transparent" Click="DeleteTodo_OnClick">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Delete this todo"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+                <Button x:Name="ValidToDo" FontFamily="Segoe MDL2 Assets" Content="&#xE8FB;"
+                        Width="50" Height="50"
+                        Background="Transparent" Click="ValidToDo_OnClick">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Content="Valid ToDo"/>
+                    </ToolTipService.ToolTip>
+                </Button>
+            </StackPanel>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <ScrollViewer VerticalScrollBarVisibility="auto">
+                <Grid Background="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.15*"></RowDefinition>
+                        <RowDefinition Height="0.85*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Edit this ToDo" TextAlignment="Center" HorizontalAlignment="Center"
+                          VerticalAlignment="Center" FontSize="30" Foreground="White" FontWeight="ExtraBlack"/>
+                    <StackPanel Grid.Row="1" Margin="20">
+                        <TextBlock TextWrapping="Wrap" Text="TITLE:" Foreground="White"
+                               TextAlignment="Center" FontWeight="ExtraBlack"/>
+                        <TextBox x:Name="TitleBox" TextWrapping="Wrap"/>
+                        <TextBlock TextWrapping="Wrap" Text="DUE DATE:" Foreground="White"
+                               TextAlignment="Center" FontWeight="ExtraBlack" Margin="0, 10, 0, 0"/>
+                        <CalendarDatePicker x:Name="DueDate" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock TextWrapping="Wrap" Text="DESCRIPTION:" Foreground="White"
+                               TextAlignment="Center" FontWeight="ExtraBlack" Margin="0, 10, 0, 0"/>
+                        <TextBox x:Name="DescriptionBox" TextWrapping="Wrap"/>
+                        <TextBlock x:Name="FormError" TextWrapping="Wrap" Text="" Foreground="Red" Visibility="Collapsed"
+                                   TextAlignment="Center" FontWeight="ExtraBlack" Margin="0, 10, 0, 0"/>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </SplitView.Content>
+
+    </SplitView>
+
+</Page>
